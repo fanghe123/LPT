@@ -1,0 +1,11 @@
+_BASE_: [
+  '../datasets/coco_detection.yml',
+  '../runtime.yml',
+  '_base_/optimizer_6x.yml',
+  '_base_/lpt_poolbackbone.yml',
+  '_base_/lpt_reader.yml',
+]
+
+weights: output/lpt_pool_6x_coco/model_final
+find_unused_parameters: True
+log_iter: 200

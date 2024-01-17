@@ -1,0 +1,22 @@
+metric: COCO
+num_classes: 80
+
+TrainDataset:
+  name: COCODataSet
+  image_dir: train2017
+  anno_path:  D:/py12/aim/PaddleDetection-develop/123/data/coco/annotations/instances_train2017.json
+  dataset_dir:  D:/py12/aim/PaddleDetection-develop/123/data/coco/
+  data_fields: ['image', 'gt_bbox', 'gt_class', 'is_crowd']
+
+EvalDataset:
+  name: COCODataSet
+  image_dir: val2017
+  anno_path: D:/py12/aim/PaddleDetection-develop/123/data/coco/annotations/instances_val2017.json
+  dataset_dir: D:/py12/aim/PaddleDetection-develop/123/data/coco
+  allow_empty: true
+
+TestDataset:
+  name: ImageFolder
+  anno_path:  D:/py12/aim/PaddleDetection-develop/123/data/coco/annotations/ # also support txt (like VOC's label_list.txt)
+  dataset_dir:  D:/py12/aim/PaddleDetection-develop/123/data/coco/ # if set, anno_path will be 'dataset_dir/anno_path'
+
